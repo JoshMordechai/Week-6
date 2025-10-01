@@ -1,4 +1,4 @@
-public class Voucher {
+public class Voucher extends Barang {
     private double pajak;
     public static int total = 0;
 
