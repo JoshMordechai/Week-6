@@ -8,7 +8,6 @@ public class Main {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Tambahkan data awal agar bisa langsung dites
         handphones.add(new Handphone(1, "Samsung Galaxy A15", 2500000, 5, "Hitam"));
         handphones.add(new Handphone(2, "iPhone 13", 9500000, 3, "Putih"));
         vouchers.add(new Voucher(1, "Pulsa Telkomsel 50K", 50000, 10, 10));
@@ -19,12 +18,12 @@ public class Main {
         do {
             System.out.println("\n=========== MENU TOKO VOUCHER & HP ===========");
             System.out.println("1. Pesan Barang");
-            System.out.println("2. Lihat Pesanan");
+            System.out.println("2. Lihatt Pesanan");
             System.out.println("3. Barang Baru");
             System.out.println("0. Keluar");
             System.out.print("Pilihan: ");
             pilihan = input.nextInt();
-            input.nextLine(); // clear buffer
+            input.nextLine(); 
 
             switch (pilihan) {
                 case 1:
@@ -45,7 +44,6 @@ public class Main {
         } while (pilihan != 0);
     }
 
-    // ================= PESAN BARANG =================
     static void pesanBarang() {
         System.out.println("\nDaftar Barang:");
         System.out.println("1. Handphone");
@@ -126,7 +124,6 @@ public class Main {
         }
     }
 
-    // ================= LIHAT PESANAN =================
     static void lihatPesanan() {
         System.out.println("\n========== DAFTAR PESANAN ==========");
         if (orders.isEmpty()) {
@@ -147,7 +144,6 @@ public class Main {
         }
     }
 
-    // ================= TAMBAH BARANG BARU =================
     static void tambahBarangBaru() {
         System.out.print("Tambah Voucher / Handphone (V/H): ");
         String jenis = input.nextLine().toUpperCase();
@@ -165,7 +161,7 @@ public class Main {
             vouchers.add(new Voucher(vouchers.size() + 1, nama, harga, stok, pajak));
             System.out.println("Voucher baru berhasil ditambahkan!");
         } else if (jenis.equals("H")) {
-            input.nextLine(); // clear buffer
+            input.nextLine(); 
             System.out.print("Warna: ");
             String warna = input.nextLine();
             handphones.add(new Handphone(handphones.size() + 1, nama, harga, stok, warna));
@@ -175,7 +171,6 @@ public class Main {
         }
     }
 
-    // ================= FUNGSI TAMBAHAN =================
     static void tampilkanHandphone() {
         System.out.println("\n===== Daftar Handphone =====");
         for (Handphone h : handphones) {
