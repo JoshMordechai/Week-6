@@ -4,26 +4,26 @@ public class Barang {
     protected String nama;
     protected int stok;
 
-    public Barang(int id, double harga, String nama, int stok) {
+    public Barang(int id, String nama, double harga, int stok) {
         this.id = id;
-        this.harga = harga;
         this.nama = nama;
+        this.harga = harga;
         this.stok = stok;
     }
 
-    public getId() {
+    public int getId() {
         return id;
     }
 
-    public getHarga() {
+    public double getHarga() {
         return harga;
     }
 
-    public getNama() {
+    public String getNama() {
         return nama;
     }
 
-    public getStok() {
+    public int getStok() {
         return stok;
     }
 

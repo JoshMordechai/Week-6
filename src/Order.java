@@ -1,9 +1,9 @@
 public class Order {
-    private String id;
+    private int id;
     private Voucher voucher;
     private Handphone handphone;
     private int jumlah;
-    private static int total = 0;
+    public static int total = 0;
 
     public Order(int id, Voucher voucher, int jumlah) {
         this.id = id;
@@ -19,11 +19,11 @@ public class Order {
         total++;
     }
 
-    public int getID() {
-        return Integer.parseInt(id);
+    public int getId() {
+        return id;
     }
 
-    public  Voucher getVoucher() {
+    public Voucher getVoucher() {
         return voucher;
     }
 
@@ -32,6 +32,6 @@ public class Order {
     }
 
     public int getJumlah() {
-        return jumlah; 
+        return jumlah;
     }
 }
